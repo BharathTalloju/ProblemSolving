@@ -67,9 +67,22 @@ void display(){
 
 }
 
-void pop(){
+void heapify(int start, int end){
+    int walker = end-1;
+    while(walker>start){
+        if(heap[(walker-1)/2] < heap[walker]){
+            int temp = heap[walker];
+            heap[walker] = heap[(walker-1)/2];
+            heap[(walker-1)/2] = temp;
+            heapify(walker, end);
+        }
+        walker--;
+    }
+}
 
+void pop(){
     printf("\npopped: %d", heap[0]);
-    end--;
+    heap[0] = heap[--end];
+    heapify(0, end);
 }
 
