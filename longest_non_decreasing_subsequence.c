@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "mem_leak_detect.c"
 
 #define MAX(X,Y) ((X) > (Y) ? (X) : (Y))
 

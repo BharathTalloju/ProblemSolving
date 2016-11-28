@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "mem_leak_detect.c"
+
 int heap[100];
 int end = 0;
 

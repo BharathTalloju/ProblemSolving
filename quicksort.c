@@ -4,7 +4,7 @@
 void quicksort(int *, int, int);
 void swap(int*, int, int);
 
-int main(){
+/*int main(){
     int n;
     int *arr;
 
@@ -23,7 +23,7 @@ int main(){
     }
 
     return 0;
-}
+}*/
 
 void quicksort(int *arr, int start, int len){
     if(start < len){
@@ -44,9 +44,11 @@ void quicksort(int *arr, int start, int len){
                 swap(arr, i, j);
             }
         }
-        swap(arr, j, start);
-        quicksort(arr, start, j);
-        quicksort(arr, i, len);
+        if(i > j){
+            swap(arr, j, start);
+            quicksort(arr, start, j);
+            quicksort(arr, i, len);
+        }
     }
 }
 
