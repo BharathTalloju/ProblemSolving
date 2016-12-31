@@ -25,6 +25,6 @@ void swap(char *word, int i, int j){
 }
 
 int main(){
-  char word[] = "abc";
-  permutations(word, 0, 3);
+  char word[] = "abcd";
+  permutations(word, 0, 4);
 }
